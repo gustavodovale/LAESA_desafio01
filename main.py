@@ -101,3 +101,5 @@ def prioridade_gravidade(pacientes_Do_Dia):
     return lista_ordenada_gravidade
 
 prioridade_gravidade(segunda_feira_E_priorizado)
+
+print("Teste de git em outro pc")
