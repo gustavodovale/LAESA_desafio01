@@ -83,23 +83,12 @@ def divisao_clientes_semana(lista_de_pacientes):
 
 segunda, terca, quarta, quinta, sexta = divisao_clientes_semana(pacientes_da_semana)
 
-def prioridade_especie(pacientes_Do_Dia):
+
+def prioridade_especie_gravidade(segunda):
     prioridade = {"Golfinho": 1, "Águia": 2, "Leão": 3, "Urso": 4}
-    lista_ordenada = sorted(pacientes_Do_Dia, key=lambda x: prioridade[x["especie"]])
-    print("\nlista ordenada por especie:", lista_ordenada)
+    prioridade_gravidade = {4: 1, 3: 2, 2: 3, 1: 4}
+    lista_ordenada = sorted(segunda, key=lambda x: (prioridade[x["especie"]], prioridade_gravidade[x["gravidade"]]))
+    print("\nlista ordenada por especie e gravidade:", lista_ordenada)
     return lista_ordenada
 
-
-
-
-segunda_feira_E_priorizado = prioridade_especie(segunda)
-
-def prioridade_gravidade(pacientes_Do_Dia):
-    prioridade_gravidade = {4: 4, 3: 3, 2: 2, 1: 1}
-    lista_ordenada_gravidade = sorted(pacientes_Do_Dia, key=lambda x: prioridade_gravidade[x["gravidade"]])
-    print("\nlista ordenada por gravidade:", lista_ordenada_gravidade)
-    return lista_ordenada_gravidade
-
-prioridade_gravidade(segunda_feira_E_priorizado)
-
-print("Teste de git em outro pc")
+segunda_feira_E_G_priorizado = prioridade_especie_gravidade(segunda)
