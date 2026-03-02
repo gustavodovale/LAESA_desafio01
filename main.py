@@ -83,6 +83,7 @@ def divisao_clientes_semana(lista_de_pacientes):
     print("Quinta-feira:", pacientes_quinta, "\n")
     print("Sexta-feira:", pacientes_sexta, "\n")
 
+print("resolver problema")
 
 divisao_clientes_semana(pacientes_da_semana)
 
