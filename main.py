@@ -54,7 +54,7 @@ pacientes_da_semana = [
 
 def maximo_clientes_dia(lista_de_pacientes):
     lista_do_Dia = []
-    for paciente in lista_de_pacientes[:8]:  # Considerando apenas os primeiros 8 pacientes como um dia
+    for paciente in lista_de_pacientes:  # Considerando apenas os primeiros 8 pacientes como um dia
         lista_do_Dia.append(paciente)
     print(lista_do_Dia)
 
