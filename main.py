@@ -65,13 +65,13 @@ print("Lista embaralhada:")
 for paciente in pacientes_embaralhados:
     print(paciente)
 
-# maximo_clientes_dia(pacientes_da_semana)
-pacientes_segunda = []
-pacientes_terca = []
-pacientes_quarta = []
-pacientes_quinta = []
-pacientes_sexta = []
+
 def divisao_clientes_semana(lista_de_pacientes):
+    pacientes_segunda = []
+    pacientes_terca = []
+    pacientes_quarta = []
+    pacientes_quinta = []
+    pacientes_sexta = []
     valor_divisao = len(lista_de_pacientes) // 5
     for i, paciente in enumerate(lista_de_pacientes):
         if i < valor_divisao:
@@ -92,7 +92,7 @@ def divisao_clientes_semana(lista_de_pacientes):
 
     return pacientes_segunda, pacientes_terca, pacientes_quarta, pacientes_quinta, pacientes_sexta
 
-segunda, terca, quarta, quinta, sexta = divisao_clientes_semana(pacientes_da_semana)
+segunda, terca, quarta, quinta, sexta = divisao_clientes_semana(pacientes_embaralhados)
 
 
 def prioridade_especie_gravidade(valor):
@@ -124,7 +124,7 @@ def unir_listas(lista1, lista2, lista3, lista4, lista5):
 
 lista_unificada = unir_listas(segunda_feira_E_G_priorizado,terceira_feira_E_G_priorizado,quarta_feira_E_G_priorizado,quinta_feira_E_G_priorizado,sexta_feira_E_G_priorizado)
 
-#print("\nLista unificada segunda:", lista_unificada)
+print("\nLista unificada:", lista_unificada)
 
 def restricao_quantidade_por_dia(lista_unificada):
     for dia_index, dia in enumerate(lista_unificada):
